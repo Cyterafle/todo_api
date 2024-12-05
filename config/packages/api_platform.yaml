@@ -1,0 +1,8 @@
+api_platform:
+    title: Todo List REST API
+    description: 'An API created in order to manage todo list tasks'
+    version: 1.0.0
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
