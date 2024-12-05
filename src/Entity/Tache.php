@@ -5,6 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\TacheRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: TacheRepository::class)]
 #[ApiResource]
@@ -15,6 +16,12 @@ class Tache
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\Length(
+        min: 3,
+        max: 255,
+        minMessage: 'Le titre ne peut pas faire moins de {{ limit }} lettres',
+        maxMessage: 'Le titre ne peut pas faire plus de {{ limit }} lettres',
+    )]
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 

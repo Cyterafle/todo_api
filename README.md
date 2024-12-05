@@ -4,14 +4,19 @@ API Todo en PHP/Symfony
 
 ## Pré-requis
 
-J'assume que vous avez déjà Symfony d'installé et de configuré sur votre poste, désolé pour la méprise s'il fallait partir de la constation contraire
+Veillez à avoir composer d'installé pour les différentes dépendances\
+
+Sinon [cliquer ici](https://getcomposer.org/download/) pour les instructions d'installation
+
+
 
 ### Dépendances utiisées
 
-Je n'ai pas vraiment compris si les dépendances seraient incluses donc je préfère vous les relister :
-- symfony/maker-bundle (Composer)
-- orm-fixtures (Composer)
-- API Platform
+Liste des dépendances utilisées :
+- symfony/maker-bundle
+- orm-fixtures
+- req api
+- symfony/validator
 
 ### La base de données
 
