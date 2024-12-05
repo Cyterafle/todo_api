@@ -4,7 +4,7 @@ API Todo en PHP/Symfony
 
 ## Pré-requis
 
-Veillez à avoir composer d'installé pour les différentes dépendances\
+Veillez à avoir composer d'installé pour les différentes dépendances
 
 Sinon [cliquer ici](https://getcomposer.org/download/) pour les instructions d'installation
 
@@ -21,6 +21,14 @@ Liste des dépendances utilisées :
 ### La base de données
 
 Il faudra renseigner le moyen d'accès au [fichier d'environnement du projet](.env)
+
+Pour la créer et la peupler à la suite du démarrage, les commandes suivantes seront utiles (orm-fixtures est nécessaire) :
+```bash
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
+```
 
 #### A modifier dans le fichier d'environnement
 Les bases de données sont présentées de cette manière (exemple avec MariaDB/mySQL qui m'a servi de test mais cela est aussi vrai pour PostgreSQL) :\
